@@ -1,22 +1,31 @@
-*{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;background:linear-gradient(130deg,#e0eaff,#f3e8ff,#c6e6ff);margin:0;color:#18243c;padding:22px}main{max-width:850px;margin:18px auto;background:white;padding:26px;border-radius:18px;box-shadow:0 12px 36px #17255422}header{text-align:center;border-bottom:1px solid #ddd;padding-bottom:18px}header img{width:110px;height:110px;object-fit:contain}h1{color:#1d4ed8}h2{background:linear-gradient(90deg,#2563eb,#7c3aed);color:white;padding:14px;border-radius:9px;text-align:center}.question{background:#eff6ff;padding:18px;margin:16px 0;border-radius:12px}.option{display:block;background:#fff;padding:12px;margin:8px 0;border-radius:9px;cursor:pointer}.option:has(input:checked){background:#dbeafe;outline:2px solid #2563eb}input[type=text]{width:100%;padding:13px;border:1px solid #a9b4c8;border-radius:8px;margin:8px 0 16px}button{background:#3158da;color:white;border:0;border-radius:8px;padding:12px 22px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}.muted{color:#64748b}.review{padding:14px;border-left:4px solid #cbd5e1;margin:12px 0;background:#f8fafc}.good{border-color:#16a34a}.bad{border-color:#dc2626}nav{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.error{color:#b91c1c}a{color:#1d4ed8}
-
-/* Reference Exam.html styling — only visual changes */
-body{font-family:Inter,Arial,sans-serif;background:linear-gradient(135deg,#e0eaff 0%,#f3e8ff 50%,#c6e6ff 100%)}
-main{max-width:900px;margin:2rem auto;padding:1.5rem;border-radius:1.25rem;box-shadow:0 20px 25px -5px rgba(0,0,0,.08),0 10px 10px -5px rgba(0,0,0,.05)}
-header{padding-bottom:1rem;border-bottom:1px solid #e5e7eb}
-header img{width:150px;height:150px;object-fit:contain;display:block;margin:0 auto .5rem}
-.institute-title{font-size:clamp(1.6rem,3.3vw,2.25rem);font-weight:800;color:blue;letter-spacing:.02em;margin:.5rem 0 1rem}
-.topic-banner{background:linear-gradient(90deg,#3b82f6,#7c3aed);color:#fff;font-weight:800;font-size:clamp(1.4rem,3vw,2rem);padding:.55rem 1rem;border-radius:.65rem;max-width:80%;margin:1rem auto .5rem;box-shadow:0 4px 10px #0002}
-.quiz-subtitle{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.3rem;color:#4338ca;margin:.8rem 0 .25rem}
-.quiz-subtitle strong{font-style:normal}
-#quiz-form>label{display:block;color:#1d4ed8;font-weight:500;margin:1.25rem 0}
-#student-name,#lookup-id{display:block;width:100%;margin-top:.55rem;padding:14px 16px;border:2px solid #94a3b8;border-radius:8px;background:white;box-shadow:0 2px 4px #00000012;font-size:1rem;outline:none}
-#student-name:focus,#lookup-id:focus{border-color:#4f46e5;box-shadow:0 0 0 3px #6366f133}
-.question{background:#eff6ff;padding:1.5rem;margin:1.5rem 0;border-radius:.75rem;box-shadow:0 2px 5px #0000000a}
-.question strong{display:block;font-size:1.1rem;color:#1e40af;margin-bottom:1rem}
-.option{background:#f3f4f6;padding:.9rem 1rem;margin:.65rem 0;border-radius:.75rem;white-space:pre-wrap;overflow-wrap:anywhere;transition:background .2s}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+*{box-sizing:border-box}
+body{margin:0;padding:1rem;min-height:100vh;font-family:Inter,Arial,sans-serif;color:#1f2937;background:linear-gradient(135deg,#e0eaff 0%,#f3e8ff 50%,#c6e6ff 100%)}
+main{max-width:900px;margin:2rem auto;padding:1.5rem;background:white;border-radius:1.25rem;box-shadow:0 20px 25px -5px #00000014,0 10px 10px -5px #0000000d}
+header{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:1rem;margin-bottom:1.5rem;border-bottom:1px solid #e5e7eb}
+header img{width:150px;height:150px;object-fit:contain;margin:0 auto .5rem}
+.institute-title{font-size:1.8rem;font-weight:800;letter-spacing:.025em;color:blue;margin:.25rem 0 .5rem;line-height:1.35}
+.topic-banner{width:80%;max-width:100%;display:block;background:linear-gradient(90deg,#3b82f6,#7c3aed);color:white;font-size:clamp(1.45rem,3.3vw,2rem);font-weight:800;padding:.55rem 1rem;border-radius:.6rem;margin:1rem auto .5rem;box-shadow:0 4px 10px #0000001a;line-height:1.3}
+.quiz-subtitle{font-family:Merriweather,Georgia,serif;color:#4338ca;font-size:clamp(1rem,2.2vw,1.25rem);font-style:italic;letter-spacing:.02em;margin:.65rem 0 .25rem}
+.quiz-subtitle strong{font-style:normal;font-weight:700}
+[hidden]{display:none!important}
+#quiz-form>label{display:block;color:#1d4ed8;font-weight:500;margin:1.25rem 0 1.5rem}
+#student-name{display:block;width:100%;padding:12px 14px;margin-top:.5rem;border:2px solid #aebbd0;border-radius:.45rem;background:white;box-shadow:0 2px 4px #00000010;font:inherit;color:#1f2937;outline:none}
+#student-name:focus{border-color:#4f46e5;box-shadow:0 0 0 3px #6366f12b}
+.question{padding:1.5rem;margin:1.5rem 0;background:#eff6ff;border-radius:.75rem;box-shadow:0 2px 5px #0000000a}
+.question strong{display:block;color:#1e40af;font-size:1.1rem;font-weight:600;margin-bottom:1rem}
+.option{display:block;position:relative;margin:.65rem 0;padding:.85rem 1rem;background:#f3f4f6;border-radius:.75rem;cursor:pointer;white-space:pre-wrap;overflow-wrap:anywhere;transition:background .2s}
 .option:hover{background:#e0e7ff}
-.option:has(input:checked){background:linear-gradient(90deg,#2563eb,#7c3aed);color:white;outline:none}
-#submit{display:block;width:100%;background:linear-gradient(90deg,#2563eb,#7c3aed);padding:14px 20px}
+.option input{margin-right:.6rem;accent-color:#2563eb}
+.option:has(input:checked){background:linear-gradient(90deg,#2563eb,#7c3aed);color:white}
+button{border:0;border-radius:.65rem;padding:.8rem 1.4rem;background:linear-gradient(90deg,#2563eb,#7c3aed);color:white;font:inherit;font-weight:700;cursor:pointer}
+button:disabled{opacity:.5;cursor:not-allowed}
+#submit{display:block;width:100%;padding:14px 20px;box-shadow:0 5px 12px #00000015}
 #submit:hover:not(:disabled){background:linear-gradient(90deg,#7c3aed,#2563eb)}
-@media(max-width:600px){body{padding:10px}main{padding:15px;margin:8px auto}.topic-banner{max-width:100%}}
+#content>h2{background:linear-gradient(90deg,#3b82f6,#7c3aed);color:white;text-align:center;border-radius:.65rem;padding:.7rem 1rem}
+#content>h1{color:#1d4ed8;text-align:center}
+.review{padding:1rem;margin:1rem 0;border-radius:.6rem;border:1px solid #d1d5db;background:#f8fafc}
+.review.good{border-color:#86efac;background:#f0fdf4}.review.bad{border-color:#fca5a5;background:#fef2f2}
+.error{padding:1rem;color:#b91c1c;background:#fef2f2;border:1px solid #fecaca;border-radius:.5rem}
+a{color:#1d4ed8}
+@media(max-width:600px){body{padding:.5rem}main{margin:.5rem auto;padding:1rem}.topic-banner{width:100%}.question{padding:1rem}.institute-title{font-size:1.55rem}}
